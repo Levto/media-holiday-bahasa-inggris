@@ -1,0 +1,201 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://Fonts/Dynamic Fonts/Lesson Content.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Placeholder/BG2.png" type="Texture" id=2]
+[ext_resource path="res://Fonts/Dynamic Fonts/Header.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Fonts/Dynamic Fonts/Normal Text.tres" type="DynamicFont" id=4]
+[ext_resource path="res://Display Scenes/LessonSix.gd" type="Script" id=5]
+[ext_resource path="res://Sprites/Buttons/Lesson/ExampleNormal.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Buttons/Lesson/ExerciseHover.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Buttons/Lesson/LessonHover.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Buttons/Lesson/ExampleHover.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Buttons/Lesson/LessonNormal.png" type="Texture" id=10]
+[ext_resource path="res://Object Scenes/InOverlay.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Object Scenes/BackButton.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Sprites/Buttons/Interface Buttons/Listen.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/Buttons/Interface Buttons/ListenHover.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/Buttons/Lesson/ExerciseNormal.png" type="Texture" id=16]
+
+[node name="LessonSix" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( -1032, -142 )
+script = ExtResource( 5 )
+
+[node name="BG" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 2 )
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 50.0
+margin_top = 50.0
+margin_right = -242.0
+margin_bottom = -50.0
+
+[node name="Main" type="VBoxContainer" parent="MarginContainer"]
+margin_right = 988.0
+margin_bottom = 651.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="MarginContainer/Main"]
+margin_right = 988.0
+margin_bottom = 79.0
+custom_fonts/font = ExtResource( 3 )
+text = "My Holiday Story"
+align = 1
+valign = 1
+
+[node name="Subtitle" type="Label" parent="MarginContainer/Main"]
+margin_top = 83.0
+margin_right = 988.0
+margin_bottom = 147.0
+rect_min_size = Vector2( 0, 64 )
+custom_fonts/font = ExtResource( 4 )
+text = "Cerita Liburanku"
+align = 1
+
+[node name="LessonContent" type="RichTextLabel" parent="MarginContainer/Main"]
+visible = false
+margin_top = 151.0
+margin_right = 988.0
+margin_bottom = 651.0
+rect_min_size = Vector2( 0, 500 )
+custom_fonts/bold_font = ExtResource( 1 )
+custom_fonts/normal_font = ExtResource( 4 )
+bbcode_enabled = true
+bbcode_text = "[b]Menuliskan Cerita Pengalaman Liburan[/b]
+Untuk mempermudah dalam menuliskan cerita liburan, cobalah untuk memasukkan informasi berikut ini di dalam ceritamu.
+1. Where did you go? [[color=yellow]Holiday Location[/color]]
+2. When did you go? [[color=yellow]Holiday Time[/color]] 
+3. Who did go there with you? [[color=yellow]Holiday Companion[/color]]
+4. How was the location? [[color=yellow]Holiday Description[/color]]
+5. What did you do? [[color=yellow]Holiday Activity[/color]]
+6. How was the holiday? [[color=yellow]Holiday Impression[/color]]"
+text = "Menuliskan Cerita Pengalaman Liburan
+Untuk mempermudah dalam menuliskan cerita liburan, cobalah untuk memasukkan informasi berikut ini di dalam ceritamu.
+1. Where did you go? [Holiday Location]
+2. When did you go? [Holiday Time] 
+3. Who did go there with you? [Holiday Companion]
+4. How was the location? [Holiday Description]
+5. What did you do? [Holiday Activity]
+6. How was the holiday? [Holiday Impression]"
+fit_content_height = true
+
+[node name="ExampleContent" type="RichTextLabel" parent="MarginContainer/Main"]
+margin_top = 151.0
+margin_right = 988.0
+margin_bottom = 651.0
+rect_min_size = Vector2( 0, 500 )
+custom_fonts/bold_font = ExtResource( 1 )
+custom_fonts/normal_font = ExtResource( 4 )
+bbcode_enabled = true
+bbcode_text = "[b]Example of a holiday story[/b]
+[center]I went to [color=yellow]Nusa Dua Beach[/color] [color=yellow]2 years ago[/color]. It is located in [color=yellow]Bali[/color].
+I went there with [color=yellow]my family[/color]. The [color=yellow]beach[/color] was [color=yellow]so beautiful[/color].
+I went [color=yellow]swimming, snorkeling[/color], and [color=yellow]making sandcastles[/color]. That was a [color=yellow]fun[/color] holiday."
+text = "Example of a holiday story
+I went to Nusa Dua Beach 2 years ago. It is located in Bali.
+I went there with my family. The beach was so beautiful.
+I went swimming, snorkeling, and making sandcastles. That was a fun holiday."
+fit_content_height = true
+
+[node name="Audio" type="TextureButton" parent="MarginContainer/Main/ExampleContent"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -124.0
+margin_top = 42.0
+margin_right = 132.0
+margin_bottom = 106.0
+texture_normal = ExtResource( 13 )
+texture_pressed = ExtResource( 13 )
+texture_hover = ExtResource( 14 )
+
+[node name="ExerciseContent" type="RichTextLabel" parent="MarginContainer/Main"]
+visible = false
+margin_top = 151.0
+margin_right = 988.0
+margin_bottom = 651.0
+rect_min_size = Vector2( 0, 500 )
+custom_fonts/bold_font = ExtResource( 1 )
+custom_fonts/normal_font = ExtResource( 4 )
+bbcode_enabled = true
+bbcode_text = "[b]Exercise![/b]
+Buatlah sebuah cerita liburan yang pernah kamu lakukan. Boleh
+cerita dari liburan semester kemarin, minggu kemarin, atau beberapa
+tahun yang lalu. Pastikan kamu mencantumkan informasi-informasi
+liburan yang kamu lakukan dengan lengkap ([color=yellow]holiday location, description, companion, activity, dan impression[/color])"
+text = "Exercise!
+Buatlah sebuah cerita liburan yang pernah kamu lakukan. Boleh
+cerita dari liburan semester kemarin, minggu kemarin, atau beberapa
+tahun yang lalu. Pastikan kamu mencantumkan informasi-informasi
+liburan yang kamu lakukan dengan lengkap (holiday location, description, companion, activity, dan impression)"
+fit_content_height = true
+
+[node name="NavButton" type="VBoxContainer" parent="."]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -217.0
+margin_top = -292.0
+margin_right = -25.0
+margin_bottom = 292.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Lesson" type="TextureButton" parent="NavButton"]
+margin_right = 192.0
+margin_bottom = 192.0
+rect_min_size = Vector2( 192, 192 )
+texture_normal = ExtResource( 10 )
+texture_pressed = ExtResource( 10 )
+texture_hover = ExtResource( 8 )
+expand = true
+stretch_mode = 3
+
+[node name="Example" type="TextureButton" parent="NavButton"]
+margin_top = 196.0
+margin_right = 192.0
+margin_bottom = 388.0
+rect_min_size = Vector2( 192, 192 )
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 6 )
+texture_hover = ExtResource( 9 )
+expand = true
+stretch_mode = 3
+
+[node name="Exercise" type="TextureButton" parent="NavButton"]
+margin_top = 392.0
+margin_right = 192.0
+margin_bottom = 584.0
+rect_min_size = Vector2( 192, 192 )
+texture_normal = ExtResource( 16 )
+texture_pressed = ExtResource( 16 )
+texture_hover = ExtResource( 7 )
+expand = true
+stretch_mode = 3
+
+[node name="BackButton" parent="." instance=ExtResource( 12 )]
+margin_right = 114.0
+margin_bottom = 114.0
+targetScene = "LessonMenu"
+
+[node name="InOverlay" parent="." instance=ExtResource( 11 )]
+visible = false
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[connection signal="button_down" from="MarginContainer/Main/ExampleContent/Audio" to="." method="_on_Audio_button_down"]
+[connection signal="button_down" from="NavButton/Lesson" to="." method="_on_Lesson_button_down"]
+[connection signal="button_down" from="NavButton/Example" to="." method="_on_Example_button_down"]
+[connection signal="button_down" from="NavButton/Exercise" to="." method="_on_Exercise_button_down"]

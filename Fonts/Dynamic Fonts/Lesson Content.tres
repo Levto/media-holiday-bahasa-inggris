@@ -1,0 +1,10 @@
+[gd_resource type="DynamicFont" load_steps=2 format=2]
+
+[ext_resource path="res://Fonts/ProductSans-Bold.ttf" type="DynamicFontData" id=1]
+
+[resource]
+size = 36
+outline_size = 1
+outline_color = Color( 0.0588235, 0.419608, 0.623529, 1 )
+extra_spacing_bottom = 10
+font_data = ExtResource( 1 )

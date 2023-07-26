@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://CameraButtonGroup.tres" type="ButtonGroup" id=2]
+[ext_resource path="res://Object Scenes/CameraButtonSprite.gd" type="Script" id=3]
+[ext_resource path="res://Sprites/Buttons/Spot Buttons/BeachHover.png" type="Texture" id=4]
+
+[node name="CameraButttonSprite" type="Sprite"]
+texture = ExtResource( 4 )
+script = ExtResource( 3 )
+
+[node name="TextureButton" type="TextureButton" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -192.0
+margin_top = -192.0
+rect_min_size = Vector2( 192, 192 )
+group = ExtResource( 2 )
+texture_normal = ExtResource( 1 )
+expand = true
+stretch_mode = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="button_down" from="TextureButton" to="." method="_on_TextureButton_button_down"]

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Forest.wav-76a0676551eaedcaff1ff7c6f187d6df.sample"
+
+[deps]
+
+source_file="res://Audio/Holiday Spots/Forest.wav"
+dest_files=[ "res://.import/Forest.wav-76a0676551eaedcaff1ff7c6f187d6df.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

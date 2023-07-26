@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Mountain.wav-d9a43a923b119cbad11b7bc297f30f82.sample"
+
+[deps]
+
+source_file="res://Audio/Holiday Spots/Mountain.wav"
+dest_files=[ "res://.import/Mountain.wav-d9a43a923b119cbad11b7bc297f30f82.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

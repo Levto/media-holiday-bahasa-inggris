@@ -1,0 +1,476 @@
+[gd_scene load_steps=27 format=2]
+
+[ext_resource path="res://Sprites/Buttons/Lesson/LessonNormal.png" type="Texture" id=1]
+[ext_resource path="res://Placeholder/9patch.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Buttons/Lesson/ExerciseHover.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Buttons/Lesson/ExampleHover.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Buttons/Spot Buttons/ForestNormal.png" type="Texture" id=5]
+[ext_resource path="res://Fonts/ProductSans-Bold.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://Fonts/Dynamic Fonts/Lesson Content.tres" type="DynamicFont" id=7]
+[ext_resource path="res://Fonts/Dynamic Fonts/Normal Text.tres" type="DynamicFont" id=8]
+[ext_resource path="res://Fonts/Dynamic Fonts/Sub Header.tres" type="DynamicFont" id=9]
+[ext_resource path="res://Sprites/Buttons/Lesson/ExerciseNormal.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Buttons/Lesson/ExampleNormal.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Backgrounds/BG2.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Buttons/Lesson/Camp.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/Buttons/Lesson/LessonHover.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/Buttons/Lesson/Family.png" type="Texture" id=15]
+[ext_resource path="res://Object Scenes/BackButton.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Object Scenes/InOverlay.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Sprites/Buttons/Lesson/Smile.png" type="Texture" id=18]
+[ext_resource path="res://Display Scenes/LessonFour.gd" type="Script" id=19]
+[ext_resource path="res://Sprites/Buttons/Interface Buttons/Listen.png" type="Texture" id=20]
+[ext_resource path="res://Sprites/Buttons/Interface Buttons/ListenHover.png" type="Texture" id=21]
+[ext_resource path="res://Sprites/Buttons/Lesson Menu/LongNextNormal.png" type="Texture" id=22]
+[ext_resource path="res://Sprites/Buttons/Lesson Menu/LongNextHover.png" type="Texture" id=23]
+[ext_resource path="res://Sprites/Buttons/Lesson Menu/LongPrevHover.png" type="Texture" id=24]
+[ext_resource path="res://Sprites/Buttons/Lesson Menu/LongPrevNormal.png" type="Texture" id=25]
+
+[sub_resource type="DynamicFont" id=1]
+size = 48
+outline_size = 3
+outline_color = Color( 0.862745, 0.576471, 0.239216, 1 )
+font_data = ExtResource( 6 )
+
+[node name="LessonOne" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( -1032, -142 )
+script = ExtResource( 19 )
+
+[node name="BG" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 50.0
+margin_top = 50.0
+margin_right = -242.0
+margin_bottom = -50.0
+
+[node name="Main" type="VBoxContainer" parent="MarginContainer"]
+margin_right = 988.0
+margin_bottom = 632.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="MarginContainer/Main"]
+margin_right = 988.0
+margin_bottom = 60.0
+custom_fonts/font = SubResource( 1 )
+text = "Asking Friend's Holiday Experience"
+align = 1
+valign = 1
+
+[node name="Subtitle" type="Label" parent="MarginContainer/Main"]
+margin_top = 64.0
+margin_right = 988.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 0, 64 )
+custom_fonts/font = ExtResource( 8 )
+text = "Menanyakan Pengalaman Liburan Teman"
+align = 1
+
+[node name="LessonContent1" type="RichTextLabel" parent="MarginContainer/Main"]
+visible = false
+margin_top = 132.0
+margin_right = 988.0
+margin_bottom = 632.0
+rect_min_size = Vector2( 0, 500 )
+custom_fonts/bold_font = ExtResource( 7 )
+custom_fonts/normal_font = ExtResource( 8 )
+bbcode_enabled = true
+bbcode_text = "[b][color=aqua]Komponen Percakapan:[/color][/b]
+[b]A. Holiday impression[/b]
+[color=yellow]Kesan liburan[/color]. Contoh kalimat tanya: \"How was you holiday?\"
+Contoh jawaban: \"it was fun\", \"it was wonderful\"
+[b]B. Holiday destination and its location[/b]
+[color=yellow]Destinasi liburan dan lokasi[/color]. Contoh kalimat tanya: \"Where did you go in your last holiday?\"
+Contoh jawaban: \"I went to Borobudur Temple in Magelang\""
+text = "Komponen Percakapan:
+A. Holiday impression
+Kesan liburan. Contoh kalimat tanya: \"How was you holiday?\"
+Contoh jawaban: \"it was fun\", \"it was wonderful\"
+B. Holiday destination and its location
+Destinasi liburan dan lokasi. Contoh kalimat tanya: \"Where did you go in your last holiday?\"
+Contoh jawaban: \"I went to Borobudur Temple in Magelang\""
+fit_content_height = true
+
+[node name="LessonContent2" type="RichTextLabel" parent="MarginContainer/Main"]
+margin_top = 132.0
+margin_right = 988.0
+margin_bottom = 632.0
+rect_min_size = Vector2( 0, 500 )
+custom_fonts/bold_font = ExtResource( 7 )
+custom_fonts/normal_font = ExtResource( 8 )
+bbcode_enabled = true
+bbcode_text = "[b][color=aqua]Komponen Percakapan:[/color][/b]
+[b]C. Holiday companion[/b]
+[color=yellow]Teman liburan[/color]. Contoh kalimat tanya: \"Who did you go there with?\"
+Contoh jawaban: \" I went there with [color=lime][person][/color] (my family/friend/brother/uncle/dll.)\"
+[b]D. Holiday activity[/b]
+[color=yellow]Aktivitas liburan[/color]. Contoh kalimat tanya: \"What did you do there?\"
+Contoh jawaban: \"I went [color=lime]fishing[/color] at the lake\""
+text = "Komponen Percakapan:
+C. Holiday companion
+Teman liburan. Contoh kalimat tanya: \"Who did you go there with?\"
+Contoh jawaban: \" I went there with [person] (my family/friend/brother/uncle/dll.)\"
+D. Holiday activity
+Aktivitas liburan. Contoh kalimat tanya: \"What did you do there?\"
+Contoh jawaban: \"I went fishing at the lake\""
+fit_content_height = true
+
+[node name="ExampleContent" type="RichTextLabel" parent="MarginContainer/Main"]
+visible = false
+margin_top = 636.0
+margin_right = 988.0
+margin_bottom = 1136.0
+rect_min_size = Vector2( 0, 500 )
+custom_fonts/bold_font = ExtResource( 7 )
+custom_fonts/normal_font = ExtResource( 8 )
+bbcode_enabled = true
+bbcode_text = "Lucy: \"Hey Audrey, how was your holiday?\" 
+Audrey: \"It was [color=yellow]great![/color]\" [b][Holiday Impression][/b]
+Lucy: \"Where did you go?\" 
+Audrey: \"I went to [color=yellow]Nusa Dua Beach[/color] with [color=yellow]Tony[/color]\" [b][Holiday Destination and Companion][/b]
+Lucy: \"Where is it?\" 
+Audrey: \"It's in [color=yellow]Bali[/color]\" [b][Holiday Location][/b]
+Lucy: \"What did you do there?\"
+Audrey: \"[color=yellow]I went swimming at the beach[/color]\" [b][Holiday Activity][/b]"
+text = "Lucy: \"Hey Audrey, how was your holiday?\" 
+Audrey: \"It was great!\" [Holiday Impression]
+Lucy: \"Where did you go?\" 
+Audrey: \"I went to Nusa Dua Beach with Tony\" [Holiday Destination and Companion]
+Lucy: \"Where is it?\" 
+Audrey: \"It's in Bali\" [Holiday Location]
+Lucy: \"What did you do there?\"
+Audrey: \"I went swimming at the beach\" [Holiday Activity]"
+fit_content_height = true
+
+[node name="Audio" type="TextureButton" parent="MarginContainer/Main/ExampleContent"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -256.0
+margin_top = 29.0
+margin_bottom = 93.0
+texture_normal = ExtResource( 20 )
+texture_pressed = ExtResource( 20 )
+texture_hover = ExtResource( 21 )
+
+[node name="ExerciseContent" type="VBoxContainer" parent="MarginContainer/Main"]
+visible = false
+margin_top = 132.0
+margin_right = 1012.0
+margin_bottom = 625.0
+alignment = 1
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="MarginContainer/Main/ExerciseContent"]
+margin_right = 1012.0
+margin_bottom = 123.0
+rect_min_size = Vector2( 400, 0 )
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/Main/ExerciseContent/VBoxContainer3"]
+margin_right = 1012.0
+margin_bottom = 69.0
+custom_fonts/font = ExtResource( 9 )
+text = "Exercise!"
+align = 1
+
+[node name="Label2" type="Label" parent="MarginContainer/Main/ExerciseContent/VBoxContainer3"]
+margin_top = 73.0
+margin_right = 1012.0
+margin_bottom = 123.0
+custom_fonts/font = ExtResource( 8 )
+text = "Make a conversation about holiday experience from these informations!"
+align = 1
+
+[node name="VBoxContainer4" type="HBoxContainer" parent="MarginContainer/Main/ExerciseContent"]
+margin_top = 127.0
+margin_right = 1012.0
+margin_bottom = 182.0
+rect_min_size = Vector2( 250, 0 )
+
+[node name="Label" type="Label" parent="MarginContainer/Main/ExerciseContent/VBoxContainer4"]
+margin_right = 250.0
+margin_bottom = 55.0
+rect_min_size = Vector2( 250, 0 )
+custom_fonts/font = ExtResource( 7 )
+text = "Impression:"
+align = 1
+
+[node name="Label2" type="Label" parent="MarginContainer/Main/ExerciseContent/VBoxContainer4"]
+margin_left = 254.0
+margin_right = 504.0
+margin_bottom = 55.0
+rect_min_size = Vector2( 250, 0 )
+custom_fonts/font = ExtResource( 7 )
+text = "Destination:"
+align = 1
+
+[node name="Label3" type="Label" parent="MarginContainer/Main/ExerciseContent/VBoxContainer4"]
+margin_left = 508.0
+margin_right = 758.0
+margin_bottom = 55.0
+rect_min_size = Vector2( 250, 0 )
+custom_fonts/font = ExtResource( 7 )
+text = "Companion:"
+align = 1
+
+[node name="Label4" type="Label" parent="MarginContainer/Main/ExerciseContent/VBoxContainer4"]
+margin_left = 762.0
+margin_right = 1012.0
+margin_bottom = 55.0
+rect_min_size = Vector2( 250, 0 )
+custom_fonts/font = ExtResource( 7 )
+text = "Activity:"
+align = 1
+
+[node name="VBoxContainer" type="HBoxContainer" parent="MarginContainer/Main/ExerciseContent"]
+margin_top = 186.0
+margin_right = 1012.0
+margin_bottom = 386.0
+rect_min_size = Vector2( 250, 0 )
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/Main/ExerciseContent/VBoxContainer"]
+margin_right = 250.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 250, 200 )
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 6
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/Main/ExerciseContent/VBoxContainer/TextureRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -96.0
+margin_top = -96.0
+margin_right = 96.0
+margin_bottom = 96.0
+texture = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="MarginContainer/Main/ExerciseContent/VBoxContainer"]
+margin_left = 254.0
+margin_right = 504.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 250, 200 )
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 6
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/Main/ExerciseContent/VBoxContainer/TextureRect2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -96.0
+margin_top = -96.0
+margin_right = 96.0
+margin_bottom = 96.0
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect3" type="TextureRect" parent="MarginContainer/Main/ExerciseContent/VBoxContainer"]
+margin_left = 508.0
+margin_right = 758.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 250, 200 )
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 6
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/Main/ExerciseContent/VBoxContainer/TextureRect3"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -96.0
+margin_top = -96.0
+margin_right = 96.0
+margin_bottom = 96.0
+texture = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect4" type="TextureRect" parent="MarginContainer/Main/ExerciseContent/VBoxContainer"]
+margin_left = 762.0
+margin_right = 1012.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 250, 200 )
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 6
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/Main/ExerciseContent/VBoxContainer/TextureRect4"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -96.0
+margin_top = -96.0
+margin_right = 96.0
+margin_bottom = 96.0
+texture = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer2" type="HBoxContainer" parent="MarginContainer/Main/ExerciseContent"]
+margin_top = 390.0
+margin_right = 1012.0
+margin_bottom = 493.0
+rect_min_size = Vector2( 250, 0 )
+
+[node name="Label" type="Label" parent="MarginContainer/Main/ExerciseContent/VBoxContainer2"]
+margin_top = 26.0
+margin_right = 250.0
+margin_bottom = 76.0
+rect_min_size = Vector2( 250, 0 )
+custom_fonts/font = ExtResource( 8 )
+text = "Fun"
+align = 1
+
+[node name="Label2" type="Label" parent="MarginContainer/Main/ExerciseContent/VBoxContainer2"]
+margin_left = 254.0
+margin_right = 504.0
+margin_bottom = 103.0
+rect_min_size = Vector2( 250, 0 )
+custom_fonts/font = ExtResource( 8 )
+text = "Cikole Camping
+Site, Bandung"
+align = 1
+
+[node name="Label3" type="Label" parent="MarginContainer/Main/ExerciseContent/VBoxContainer2"]
+margin_left = 508.0
+margin_top = 26.0
+margin_right = 758.0
+margin_bottom = 76.0
+rect_min_size = Vector2( 250, 0 )
+custom_fonts/font = ExtResource( 8 )
+text = "Family"
+align = 1
+
+[node name="Label4" type="Label" parent="MarginContainer/Main/ExerciseContent/VBoxContainer2"]
+margin_left = 762.0
+margin_top = 26.0
+margin_right = 1012.0
+margin_bottom = 76.0
+rect_min_size = Vector2( 250, 0 )
+custom_fonts/font = ExtResource( 8 )
+text = "Camping"
+align = 1
+
+[node name="NavButton" type="VBoxContainer" parent="."]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -217.0
+margin_top = -292.0
+margin_right = -25.0
+margin_bottom = 292.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Lesson" type="TextureButton" parent="NavButton"]
+margin_right = 192.0
+margin_bottom = 192.0
+rect_min_size = Vector2( 192, 192 )
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 1 )
+texture_hover = ExtResource( 14 )
+expand = true
+stretch_mode = 3
+
+[node name="Example" type="TextureButton" parent="NavButton"]
+margin_top = 196.0
+margin_right = 192.0
+margin_bottom = 388.0
+rect_min_size = Vector2( 192, 192 )
+texture_normal = ExtResource( 11 )
+texture_pressed = ExtResource( 11 )
+texture_hover = ExtResource( 4 )
+expand = true
+stretch_mode = 3
+
+[node name="Exercise" type="TextureButton" parent="NavButton"]
+margin_top = 392.0
+margin_right = 192.0
+margin_bottom = 584.0
+rect_min_size = Vector2( 192, 192 )
+texture_normal = ExtResource( 10 )
+texture_pressed = ExtResource( 10 )
+texture_hover = ExtResource( 3 )
+expand = true
+stretch_mode = 3
+
+[node name="BackButton" parent="." instance=ExtResource( 16 )]
+margin_right = 114.0
+margin_bottom = 114.0
+targetScene = "LessonMenu"
+
+[node name="InOverlay" parent="." instance=ExtResource( 17 )]
+visible = false
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[node name="LessonNavButton" type="HBoxContainer" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -458.0
+margin_top = -171.0
+margin_right = -254.0
+margin_bottom = -48.0
+alignment = 2
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Prev" type="TextureButton" parent="LessonNavButton"]
+visible = false
+margin_right = 100.0
+margin_bottom = 123.0
+rect_min_size = Vector2( 100, 0 )
+texture_normal = ExtResource( 25 )
+texture_pressed = ExtResource( 25 )
+texture_hover = ExtResource( 24 )
+expand = true
+stretch_mode = 3
+
+[node name="Next" type="TextureButton" parent="LessonNavButton"]
+margin_left = 104.0
+margin_right = 204.0
+margin_bottom = 123.0
+rect_min_size = Vector2( 100, 0 )
+texture_normal = ExtResource( 22 )
+texture_pressed = ExtResource( 22 )
+texture_hover = ExtResource( 23 )
+expand = true
+stretch_mode = 3
+
+[connection signal="button_down" from="MarginContainer/Main/ExampleContent/Audio" to="." method="_on_Audio_button_down"]
+[connection signal="button_down" from="NavButton/Lesson" to="." method="_on_Lesson_button_down"]
+[connection signal="button_down" from="NavButton/Example" to="." method="_on_Example_button_down"]
+[connection signal="button_down" from="NavButton/Exercise" to="." method="_on_Exercise_button_down"]
+[connection signal="button_down" from="LessonNavButton/Prev" to="." method="_on_Prev_button_down"]
+[connection signal="button_down" from="LessonNavButton/Next" to="." method="_on_Next_button_down"]

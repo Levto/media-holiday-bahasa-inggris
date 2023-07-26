@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Lake.wav-21a42da346e980c7bc8d6411cd8b2543.sample"
+
+[deps]
+
+source_file="res://Audio/Holiday Spots/Lake.wav"
+dest_files=[ "res://.import/Lake.wav-21a42da346e980c7bc8d6411cd8b2543.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

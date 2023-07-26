@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Beach.wav-95c44e87e2a69fa7589c4749ecd4a11b.sample"
+
+[deps]
+
+source_file="res://Audio/Holiday Spots/Beach.wav"
+dest_files=[ "res://.import/Beach.wav-95c44e87e2a69fa7589c4749ecd4a11b.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

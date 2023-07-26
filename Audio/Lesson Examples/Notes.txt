@@ -1,0 +1,4 @@
+Tony = Daniel
+John = Mark
+Audrey = Velma
+Lucy = Cortana

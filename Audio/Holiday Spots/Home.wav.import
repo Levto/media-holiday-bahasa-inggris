@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Home.wav-6061503fed7418f244a3296c6c76a837.sample"
+
+[deps]
+
+source_file="res://Audio/Holiday Spots/Home.wav"
+dest_files=[ "res://.import/Home.wav-6061503fed7418f244a3296c6c76a837.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

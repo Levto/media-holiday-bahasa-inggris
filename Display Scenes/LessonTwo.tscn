@@ -1,0 +1,561 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://Sprites/Buttons/Lesson/LessonNormal.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/Buttons/Lesson/ExampleHover.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Buttons/Lesson/ExerciseHover.png" type="Texture" id=3]
+[ext_resource path="res://Placeholder/9patch.png" type="Texture" id=4]
+[ext_resource path="res://Placeholder/BG3.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Buttons/Spot Buttons/BeachNormal.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Buttons/Spot Buttons/RiverNormal.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Buttons/Lesson/ExampleNormal.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Buttons/Lesson/LessonHover.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Buttons/Spot Buttons/Swimming PoolNormal.png" type="Texture" id=10]
+[ext_resource path="res://Fonts/Dynamic Fonts/Sub Header.tres" type="DynamicFont" id=11]
+[ext_resource path="res://Fonts/Dynamic Fonts/Lesson Content.tres" type="DynamicFont" id=12]
+[ext_resource path="res://Fonts/Dynamic Fonts/Normal Text.tres" type="DynamicFont" id=13]
+[ext_resource path="res://Fonts/Dynamic Fonts/Header.tres" type="DynamicFont" id=14]
+[ext_resource path="res://Object Scenes/BackButton.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Object Scenes/InOverlay.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Sprites/Buttons/Lesson/ExerciseNormal.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/Buttons/Spot Buttons/City ParkNormal.png" type="Texture" id=18]
+[ext_resource path="res://Display Scenes/LessonTwo.gd" type="Script" id=19]
+[ext_resource path="res://Sprites/Buttons/Interface Buttons/Audio.png" type="Texture" id=20]
+[ext_resource path="res://Sprites/Buttons/Interface Buttons/AudioHover.png" type="Texture" id=21]
+
+[node name="LessonOne" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( -1032, -142 )
+script = ExtResource( 19 )
+
+[node name="BG" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 5 )
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 50.0
+margin_top = 50.0
+margin_right = -242.0
+margin_bottom = -50.0
+
+[node name="Main" type="VBoxContainer" parent="MarginContainer"]
+margin_right = 992.0
+margin_bottom = 636.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="MarginContainer/Main"]
+margin_right = 992.0
+margin_bottom = 79.0
+custom_fonts/font = ExtResource( 14 )
+text = "Holiday Activity"
+align = 1
+valign = 1
+
+[node name="Subtitle" type="Label" parent="MarginContainer/Main"]
+margin_top = 83.0
+margin_right = 992.0
+margin_bottom = 133.0
+rect_min_size = Vector2( 0, 50 )
+custom_fonts/font = ExtResource( 13 )
+text = "Aktivitas Liburan"
+align = 1
+
+[node name="LessonContent" type="RichTextLabel" parent="MarginContainer/Main"]
+visible = false
+margin_top = 137.0
+margin_right = 988.0
+margin_bottom = 662.0
+rect_min_size = Vector2( 0, 500 )
+custom_fonts/bold_font = ExtResource( 12 )
+custom_fonts/normal_font = ExtResource( 13 )
+bbcode_enabled = true
+bbcode_text = "[b]Menceritakan Aktivitas Selama Liburan[/b]
+Saat menceritakan aktivitas selama liburan, gunakan kata kerja dalam bentuk [b][color=lime]Past Tense[/color][/b] (Verb 2). Perhatikan pola perubahan bentuk 
+kata kerja [color=yellow]regular[/color] (akhiran -ed) dan [color=yellow]Irregular[/color].
+Contoh: 
+Visit (mengunjungi) >> Visited (regular), Go (pergi) >> Went (irregular)
+[b]Pola kalimat sederhana:[/b]
+A. [color=aqua]Subject[/color] + [color=lime]went[/color] + [color=yellow]activity (bentuk -ing)[/color]  + at + [color=yellow]holiday location[/color] + waktu
+B. [color=aqua]Subject[/color] + [color=lime]verb 2[/color] + at (menyesuaikan) + [color=yellow]holiday location[/color] + waktu"
+text = "Menceritakan Aktivitas Selama Liburan
+Saat menceritakan aktivitas selama liburan, gunakan kata kerja dalam bentuk Past Tense (Verb 2). Perhatikan pola perubahan bentuk 
+kata kerja regular (akhiran -ed) dan Irregular.
+Contoh: 
+Visit (mengunjungi) >> Visited (regular), Go (pergi) >> Went (irregular)
+Pola kalimat sederhana:
+A. Subject + went + activity (bentuk -ing)  + at + holiday location + waktu
+B. Subject + verb 2 + at (menyesuaikan) + holiday location + waktu"
+fit_content_height = true
+
+[node name="ExampleContent" type="VBoxContainer" parent="MarginContainer/Main"]
+margin_top = 137.0
+margin_right = 992.0
+margin_bottom = 636.0
+
+[node name="Label" type="Label" parent="MarginContainer/Main/ExampleContent"]
+margin_right = 992.0
+margin_bottom = 55.0
+custom_fonts/font = ExtResource( 12 )
+text = "Example"
+
+[node name="1" type="HBoxContainer" parent="MarginContainer/Main/ExampleContent"]
+margin_top = 59.0
+margin_right = 992.0
+margin_bottom = 129.0
+
+[node name="Audio1" type="TextureButton" parent="MarginContainer/Main/ExampleContent/1"]
+margin_right = 88.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 88, 70 )
+texture_normal = ExtResource( 20 )
+texture_pressed = ExtResource( 20 )
+texture_hover = ExtResource( 21 )
+
+[node name="Text1" type="RichTextLabel" parent="MarginContainer/Main/ExampleContent/1"]
+margin_left = 92.0
+margin_right = 992.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 900, 70 )
+custom_fonts/bold_font = ExtResource( 12 )
+custom_fonts/normal_font = ExtResource( 13 )
+bbcode_enabled = true
+bbcode_text = "1. I [color=lime]went[/color] [color=yellow]fishing[/color] at the [color=yellow]lake[/color] in the last weekend"
+text = "1. I went fishing at the lake in the last weekend"
+scroll_active = false
+
+[node name="2" type="HBoxContainer" parent="MarginContainer/Main/ExampleContent"]
+margin_top = 133.0
+margin_right = 992.0
+margin_bottom = 203.0
+
+[node name="Audio2" type="TextureButton" parent="MarginContainer/Main/ExampleContent/2"]
+margin_right = 88.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 88, 70 )
+texture_normal = ExtResource( 20 )
+texture_pressed = ExtResource( 20 )
+texture_hover = ExtResource( 21 )
+
+[node name="Text2" type="RichTextLabel" parent="MarginContainer/Main/ExampleContent/2"]
+margin_left = 92.0
+margin_right = 992.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 900, 70 )
+custom_fonts/bold_font = ExtResource( 12 )
+custom_fonts/normal_font = ExtResource( 13 )
+bbcode_enabled = true
+bbcode_text = "2. Tony [color=lime]went[/color] [color=yellow]hiking[/color] at the [color=yellow]mountain[/color] in the last holiday"
+text = "2. Tony went hiking at the mountain in the last holiday"
+scroll_active = false
+
+[node name="3" type="HBoxContainer" parent="MarginContainer/Main/ExampleContent"]
+margin_top = 207.0
+margin_right = 992.0
+margin_bottom = 277.0
+
+[node name="Audio3" type="TextureButton" parent="MarginContainer/Main/ExampleContent/3"]
+margin_right = 88.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 88, 70 )
+texture_normal = ExtResource( 20 )
+texture_pressed = ExtResource( 20 )
+texture_hover = ExtResource( 21 )
+
+[node name="Text3" type="RichTextLabel" parent="MarginContainer/Main/ExampleContent/3"]
+margin_left = 92.0
+margin_right = 992.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 900, 70 )
+custom_fonts/bold_font = ExtResource( 12 )
+custom_fonts/normal_font = ExtResource( 13 )
+bbcode_enabled = true
+bbcode_text = "3. Audrey [color=lime]went[/color] [color=yellow]shopping[/color] at the [color=yellow]mall[/color] yesterday
+"
+text = "3. Audrey went shopping at the mall yesterday
+"
+scroll_active = false
+
+[node name="4" type="HBoxContainer" parent="MarginContainer/Main/ExampleContent"]
+margin_top = 281.0
+margin_right = 992.0
+margin_bottom = 351.0
+
+[node name="Audio4" type="TextureButton" parent="MarginContainer/Main/ExampleContent/4"]
+margin_right = 88.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 88, 70 )
+texture_normal = ExtResource( 20 )
+texture_pressed = ExtResource( 20 )
+texture_hover = ExtResource( 21 )
+
+[node name="Text4" type="RichTextLabel" parent="MarginContainer/Main/ExampleContent/4"]
+margin_left = 92.0
+margin_right = 992.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 900, 70 )
+custom_fonts/bold_font = ExtResource( 12 )
+custom_fonts/normal_font = ExtResource( 13 )
+bbcode_enabled = true
+bbcode_text = "4. John [color=lime]went[/color] [color=yellow]camping[/color] at the [color=yellow]forest[/color] two weeks ago
+"
+text = "4. John went camping at the forest two weeks ago
+"
+scroll_active = false
+
+[node name="5" type="HBoxContainer" parent="MarginContainer/Main/ExampleContent"]
+margin_top = 355.0
+margin_right = 992.0
+margin_bottom = 425.0
+
+[node name="Audio5" type="TextureButton" parent="MarginContainer/Main/ExampleContent/5"]
+margin_right = 88.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 88, 70 )
+texture_normal = ExtResource( 20 )
+texture_pressed = ExtResource( 20 )
+texture_hover = ExtResource( 21 )
+
+[node name="Text5" type="RichTextLabel" parent="MarginContainer/Main/ExampleContent/5"]
+margin_left = 92.0
+margin_right = 992.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 900, 70 )
+custom_fonts/bold_font = ExtResource( 12 )
+custom_fonts/normal_font = ExtResource( 13 )
+bbcode_enabled = true
+bbcode_text = "5. Lucy [color=lime]visited[/color] the [color=yellow]museum[/color] last year"
+text = "5. Lucy visited the museum last year"
+scroll_active = false
+
+[node name="6" type="HBoxContainer" parent="MarginContainer/Main/ExampleContent"]
+margin_top = 429.0
+margin_right = 992.0
+margin_bottom = 499.0
+
+[node name="Audio6" type="TextureButton" parent="MarginContainer/Main/ExampleContent/6"]
+margin_right = 88.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 88, 70 )
+texture_normal = ExtResource( 20 )
+texture_pressed = ExtResource( 20 )
+texture_hover = ExtResource( 21 )
+
+[node name="Text6" type="RichTextLabel" parent="MarginContainer/Main/ExampleContent/6"]
+margin_left = 92.0
+margin_right = 992.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 900, 70 )
+custom_fonts/bold_font = ExtResource( 12 )
+custom_fonts/normal_font = ExtResource( 13 )
+bbcode_enabled = true
+bbcode_text = "6. I [color=lime]stayed[/color] at [color=yellow]home[/color] in the last holiday"
+text = "6. I stayed at home in the last holiday"
+scroll_active = false
+
+[node name="ExerciseContent" type="HBoxContainer" parent="MarginContainer/Main"]
+visible = false
+margin_top = 655.0
+margin_right = 988.0
+margin_bottom = 1167.0
+alignment = 1
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="MarginContainer/Main/ExerciseContent"]
+margin_left = 35.0
+margin_right = 445.0
+margin_bottom = 512.0
+rect_min_size = Vector2( 400, 0 )
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/Main/ExerciseContent/VBoxContainer3"]
+margin_top = 115.0
+margin_right = 410.0
+margin_bottom = 184.0
+custom_fonts/font = ExtResource( 11 )
+text = "Exercise!"
+align = 1
+
+[node name="Label2" type="Label" parent="MarginContainer/Main/ExerciseContent/VBoxContainer3"]
+margin_top = 188.0
+margin_right = 410.0
+margin_bottom = 397.0
+rect_min_size = Vector2( 410, 0 )
+custom_fonts/font = ExtResource( 13 )
+text = "Buatlah kalimat tentang
+aktivitas liburan di lokasi
+berikut ini!
+(Gunakan pola kalimat A)"
+align = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/Main/ExerciseContent"]
+margin_left = 449.0
+margin_right = 699.0
+margin_bottom = 512.0
+rect_min_size = Vector2( 250, 0 )
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/Main/ExerciseContent/VBoxContainer"]
+margin_right = 250.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 200, 200 )
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 6
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/Main/ExerciseContent/VBoxContainer/TextureRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -96.0
+margin_top = -96.0
+margin_right = 96.0
+margin_bottom = 96.0
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="MarginContainer/Main/ExerciseContent/VBoxContainer"]
+margin_top = 204.0
+margin_right = 250.0
+margin_bottom = 254.0
+custom_fonts/font = ExtResource( 13 )
+text = "Pantai"
+align = 1
+
+[node name="TextureRect2" type="TextureRect" parent="MarginContainer/Main/ExerciseContent/VBoxContainer"]
+margin_top = 258.0
+margin_right = 250.0
+margin_bottom = 458.0
+rect_min_size = Vector2( 200, 200 )
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 6
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/Main/ExerciseContent/VBoxContainer/TextureRect2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -96.0
+margin_top = -96.0
+margin_right = 96.0
+margin_bottom = 96.0
+texture = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="MarginContainer/Main/ExerciseContent/VBoxContainer"]
+margin_top = 462.0
+margin_right = 250.0
+margin_bottom = 512.0
+custom_fonts/font = ExtResource( 13 )
+text = "Taman Kota"
+align = 1
+
+[node name="VBoxContainer4" type="VBoxContainer" parent="MarginContainer/Main/ExerciseContent"]
+margin_left = 703.0
+margin_right = 953.0
+margin_bottom = 512.0
+rect_min_size = Vector2( 250, 0 )
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/Main/ExerciseContent/VBoxContainer4"]
+margin_right = 250.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 200, 200 )
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 6
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/Main/ExerciseContent/VBoxContainer4/TextureRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -96.0
+margin_top = -96.0
+margin_right = 96.0
+margin_bottom = 96.0
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="MarginContainer/Main/ExerciseContent/VBoxContainer4"]
+margin_top = 204.0
+margin_right = 250.0
+margin_bottom = 254.0
+custom_fonts/font = ExtResource( 13 )
+text = "Sungai"
+align = 1
+
+[node name="TextureRect2" type="TextureRect" parent="MarginContainer/Main/ExerciseContent/VBoxContainer4"]
+margin_top = 258.0
+margin_right = 250.0
+margin_bottom = 458.0
+rect_min_size = Vector2( 200, 200 )
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 6
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/Main/ExerciseContent/VBoxContainer4/TextureRect2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -96.0
+margin_top = -96.0
+margin_right = 96.0
+margin_bottom = 96.0
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="MarginContainer/Main/ExerciseContent/VBoxContainer4"]
+margin_top = 462.0
+margin_right = 250.0
+margin_bottom = 512.0
+custom_fonts/font = ExtResource( 13 )
+text = "Kolam Renang"
+align = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/Main/ExerciseContent"]
+visible = false
+margin_left = 590.0
+margin_right = 840.0
+margin_bottom = 512.0
+rect_min_size = Vector2( 250, 0 )
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/Main/ExerciseContent/VBoxContainer2"]
+margin_right = 250.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 200, 200 )
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 6
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/Main/ExerciseContent/VBoxContainer2/TextureRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -96.0
+margin_top = -96.0
+margin_right = 96.0
+margin_bottom = 96.0
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="MarginContainer/Main/ExerciseContent/VBoxContainer2"]
+margin_top = 204.0
+margin_right = 250.0
+margin_bottom = 254.0
+custom_fonts/font = ExtResource( 13 )
+text = "Bioskop"
+align = 1
+
+[node name="TextureRect2" type="TextureRect" parent="MarginContainer/Main/ExerciseContent/VBoxContainer2"]
+margin_top = 258.0
+margin_right = 250.0
+margin_bottom = 458.0
+rect_min_size = Vector2( 200, 200 )
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 6
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/Main/ExerciseContent/VBoxContainer2/TextureRect2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -96.0
+margin_top = -96.0
+margin_right = 96.0
+margin_bottom = 96.0
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="MarginContainer/Main/ExerciseContent/VBoxContainer2"]
+margin_top = 462.0
+margin_right = 250.0
+margin_bottom = 512.0
+custom_fonts/font = ExtResource( 13 )
+text = "Bioskop"
+align = 1
+
+[node name="NavButton" type="VBoxContainer" parent="."]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -217.0
+margin_top = -292.0
+margin_right = -25.0
+margin_bottom = 292.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Lesson" type="TextureButton" parent="NavButton"]
+margin_right = 192.0
+margin_bottom = 192.0
+rect_min_size = Vector2( 192, 192 )
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 1 )
+texture_hover = ExtResource( 9 )
+expand = true
+stretch_mode = 3
+
+[node name="Example" type="TextureButton" parent="NavButton"]
+margin_top = 196.0
+margin_right = 192.0
+margin_bottom = 388.0
+rect_min_size = Vector2( 192, 192 )
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 8 )
+texture_hover = ExtResource( 2 )
+expand = true
+stretch_mode = 3
+
+[node name="Exercise" type="TextureButton" parent="NavButton"]
+margin_top = 392.0
+margin_right = 192.0
+margin_bottom = 584.0
+rect_min_size = Vector2( 192, 192 )
+texture_normal = ExtResource( 17 )
+texture_pressed = ExtResource( 17 )
+texture_hover = ExtResource( 3 )
+expand = true
+stretch_mode = 3
+
+[node name="BackButton" parent="." instance=ExtResource( 15 )]
+margin_right = 114.0
+margin_bottom = 114.0
+targetScene = "LessonMenu"
+
+[node name="InOverlay" parent="." instance=ExtResource( 16 )]
+visible = false
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[connection signal="button_down" from="MarginContainer/Main/ExampleContent/1/Audio1" to="." method="_on_Audio1_button_down"]
+[connection signal="button_down" from="MarginContainer/Main/ExampleContent/2/Audio2" to="." method="_on_Audio2_button_down"]
+[connection signal="button_down" from="MarginContainer/Main/ExampleContent/3/Audio3" to="." method="_on_Audio3_button_down"]
+[connection signal="button_down" from="MarginContainer/Main/ExampleContent/4/Audio4" to="." method="_on_Audio4_button_down"]
+[connection signal="button_down" from="MarginContainer/Main/ExampleContent/5/Audio5" to="." method="_on_Audio5_button_down"]
+[connection signal="button_down" from="MarginContainer/Main/ExampleContent/6/Audio6" to="." method="_on_Audio6_button_down"]
+[connection signal="button_down" from="NavButton/Lesson" to="." method="_on_Lesson_button_down"]
+[connection signal="button_down" from="NavButton/Example" to="." method="_on_Example_button_down"]
+[connection signal="button_down" from="NavButton/Exercise" to="." method="_on_Exercise_button_down"]

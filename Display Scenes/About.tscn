@@ -1,0 +1,136 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Fonts/Dynamic Fonts/Header.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Fonts/Dynamic Fonts/Normal Text.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Fonts/Dynamic Fonts/Lesson Content.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Sprites/LOGO-TEKPEND 128x128.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/LOGO-UPI 128x120.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Backgrounds/BG2.png" type="Texture" id=9]
+[ext_resource path="res://Object Scenes/InOverlay.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Object Scenes/BackButton.tscn" type="PackedScene" id=17]
+
+[node name="About" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( -1032, -142 )
+
+[node name="BG" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 9 )
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 50.0
+margin_top = 50.0
+margin_right = -50.0
+margin_bottom = -50.0
+
+[node name="Main" type="VBoxContainer" parent="MarginContainer"]
+margin_right = 1180.0
+margin_bottom = 717.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="MarginContainer/Main"]
+margin_right = 1180.0
+margin_bottom = 79.0
+custom_fonts/font = ExtResource( 1 )
+text = "Tentang Media"
+align = 1
+valign = 1
+
+[node name="Subtitle" type="Label" parent="MarginContainer/Main"]
+margin_top = 83.0
+margin_right = 1180.0
+margin_bottom = 147.0
+rect_min_size = Vector2( 0, 64 )
+custom_fonts/font = ExtResource( 2 )
+text = "Media Pembelajaran Bahasa Inggris Kelas V"
+align = 1
+
+[node name="LessonContent" type="RichTextLabel" parent="MarginContainer/Main"]
+margin_top = 151.0
+margin_right = 1180.0
+margin_bottom = 717.0
+rect_min_size = Vector2( 0, 500 )
+custom_fonts/bold_font = ExtResource( 3 )
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = "[center][b]Media pembelajaran ini disusun oleh:[/b]
+Ahnaf Arzaqu Zaki Jumadi
+
+Program Studi Teknologi Pendidikan
+Fakultas Ilmu Pendidikan
+Universitas Pendidikan Indonesia
+2022
+
+Menggunakan aplikasi Godot Game Engine[/center]
+
+"
+text = "Media pembelajaran ini disusun oleh:
+Ahnaf Arzaqu Zaki Jumadi
+
+Program Studi Teknologi Pendidikan
+Fakultas Ilmu Pendidikan
+Universitas Pendidikan Indonesia
+2022
+
+Menggunakan aplikasi Godot Game Engine
+
+"
+fit_content_height = true
+
+[node name="ExampleContent" type="RichTextLabel" parent="MarginContainer/Main"]
+visible = false
+margin_top = 151.0
+margin_right = 988.0
+margin_bottom = 651.0
+rect_min_size = Vector2( 0, 500 )
+custom_fonts/bold_font = ExtResource( 3 )
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = "[b]Conversation Example:[/b]
+Tony: \"Hey Audrey, do you have any plan for next holiday?\" [b][A][/b]
+Audrey: \"No I don't\"
+Tony: \"Let's go to the [b][color=yellow]lake[/color][/b] together, what do you think?\" [b][B][/b]
+Audrey: \"Hmm why dont we go to the [b][color=yellow]beach[/color][/b] instead?\" [b][C][/b]
+Tony: \"That sounds great! Let's go there\" [b][D][/b]"
+text = "Conversation Example:
+Tony: \"Hey Audrey, do you have any plan for next holiday?\" [A]
+Audrey: \"No I don't\"
+Tony: \"Let's go to the lake together, what do you think?\" [B]
+Audrey: \"Hmm why dont we go to the beach instead?\" [C]
+Tony: \"That sounds great! Let's go there\" [D]"
+fit_content_height = true
+
+[node name="BackButton" parent="." instance=ExtResource( 17 )]
+margin_right = 114.0
+margin_bottom = 114.0
+targetScene = "MainMenu"
+
+[node name="LogoUPI" type="TextureRect" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 50.0
+margin_top = -175.0
+margin_right = 128.0
+margin_bottom = -50.0
+texture = ExtResource( 5 )
+
+[node name="LogoUPI2" type="TextureRect" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -178.0
+margin_top = -175.0
+margin_right = -50.0
+margin_bottom = -50.0
+texture = ExtResource( 4 )
+
+[node name="InOverlay" parent="." instance=ExtResource( 16 )]
+visible = false
